@@ -1,0 +1,97 @@
+#content {
+	width: 100%;
+}
+.content_txt {
+	width: 100%; 
+	max-width: 750px; 
+	margin: auto; 
+	text-align: center;
+}
+.wrapper {
+	width:calc(100% - 100px); 
+	padding:50px;
+	max-width: 1200px;
+	margin: auto;
+        text-align: center;
+}
+.pet_tittle h4{
+    color: black;
+    
+}
+.pet_tittle p{
+    color: black;
+}
+#left_side_content {
+	width: calc(100% - 375px);
+	float: left;
+	text-align: left;
+}
+#bg_internas {
+	background-position: left top;
+	background-repeat: repeat;
+	background-image: url('imghuellas.png');
+	background-color: #2980B9;
+	min-height: 200px;
+	width: 100%;
+	position: relative;
+}
+#tittle_section {
+	position: absolute;
+	bottom: -11px;
+	width: 100%;
+	text-align: center;
+}
+#subtittle_section {
+	margin-top: -63px; 
+	margin-bottom: 40px; 
+	display: block;
+}
+.pet_face {
+	float: left; 
+	width: 250px;
+	height: 350px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pet_tittle {
+	float: right; 
+	width: calc(100% - 300px);
+}
+.t6 {
+	font-family: 'Lato', sans-serif;
+	font-size:50px;
+	text-decoration:none;
+	font-weight:300;
+	letter-spacing: 2px;
+        
+}
+.white {
+	color:#FFF;
+}
+.button{
+    border: none;
+    width: 40%;
+    color: white;
+    font-size: 20px;
+    background:  #2E86C1;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.button:hover{
+    background: #154360;
+}
+.bt_generic_grey{
+    border: none;
+    width: 40%;
+    color: white;
+    font-size: 20px;
+    background:  #2E86C1;
+    padding: 14px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.bt_generic_grey:hover{
+    background: #154360;
+}

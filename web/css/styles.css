@@ -1,0 +1,201 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+h1{
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 80px;
+}
+h2{
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: white;
+}
+h5{
+    margin-bottom: 0px;
+}
+section{
+    padding: 120px 0; /*espacio entre seciones*/
+}
+p{
+    font-size: 18px;
+    color: #999999;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+a:hover{
+    text-decoration: none;
+}
+.topmargin-xs{
+    margin-top: 15px;
+}
+.topmargin-sn{
+    margin-top: 30px;
+}
+.topmargin-lg{
+    margin-top: 60px;
+}
+.btn{
+    font-size: 14px;
+    padding: 15px 26px;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+.btn-light{
+    background-color: #ffffff;
+    color: #lalala;
+    border: 2px solid #ffffff;
+}
+.btn i{
+    font-size: 14px;
+    margin-left: 5px;
+}
+.text-dark{
+    color:black;
+}
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05); /* sombra */
+    min-height:  100px;
+}
+.nav-link{
+    color : #1a1a1a;
+}
+.nav-link:hover{ /* cursor sobre los links*/
+    color : #1a1a1a;
+}
+.logo-brand{
+    min-width: 130px;
+    max-width: 160px;
+}
+.navbar-toggler{
+    font-size: 40px;
+}
+.navbar-toggler:focus{ /* para que se deje de ver el cuadro naraja cuando le damos click*/
+    outline: none;
+}
+#portada{ /* img portada*/
+    background-image: url('portada.jpg');
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 900px;
+}
+#portada p{
+    color: black;
+} 
+.content-center{
+    color: black; /* adoptar es AMAR*/
+    max-width:  800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+
+}
+
+
+/* SEGUNDA PARTE DE LA PAGINA*/
+
+
+
+.portfolio-container{
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+.portfolio-container img{ /*efecto de transicion*/
+    -moz-transition: all 0.3s;
+    /*distintos navegadores*/
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.portfolio-container:hover img{ /* agrandar imagen*/
+    -moz-transform: scale(1,1.2);
+    -webkit-transform: scale(1,1.2);
+    transform: scale(1,1.2);
+}
+
+.portfolio-details{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+.portfolio-details h2{
+    margin-bottom: 0px;
+}
+
+.portfolio-details a h2, .portfolio-details a p{ /* HACER QUE LAS LETRAS ESTEN DEBAJO DEL HEADER*/
+    color: black;
+
+}
+
+
+/*TERCER PARTE DE LA PAGINA */
+
+.bg-light-grey{
+    background-color:  #eaecee;
+}
+.menber-container{
+    position: relative;
+    margin: 10px 0;
+}
+.menber-details{
+    position: absolute;
+    color:white;
+    bottom: 0px;
+    left: 20px;
+}
+.menber-details span{
+    font-size: 14px;
+}
+.menber-details i{
+    padding: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575.98px) { 
+    h1{
+        font-size: 40px;
+        line-height: normal;
+        .portfolio-details h2{
+            font-size: 32px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .portfolio-details h2 {
+        font-size: 30px;
+    }
+
+
+}
+
+/*
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+
+@media (min-width: 1200px) { ... }
+*/

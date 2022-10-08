@@ -1,0 +1,41 @@
+/*BANNER DE LA PAGINA*/
+
+#content {
+	width: 100%;
+}
+.wrapper {
+	padding:50px;
+	margin: auto;
+        text-align: center;
+}
+#bg_internas {
+	background-position: left top;
+	background-repeat: repeat;
+	background-image: url('imghuellas.png');
+	background-color: #8F3950;
+	min-height: 250px;
+	width: 100%;
+	position: relative;
+}
+#tittle_section {
+	position: absolute;
+	bottom: -11px;
+	width: 100%;
+	text-align: center;
+}
+#subtittle_section {
+	margin-top: -63px; 
+	margin-bottom: 40px; 
+	display: block;
+}
+.t6 {
+	font-family: 'Lato', sans-serif;
+	font-size:50px;
+	text-decoration:none;
+	font-weight:300;
+	letter-spacing: 2px;
+        
+}
+.white {
+	color:#FFF;
+}

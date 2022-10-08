@@ -1,0 +1,189 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+h1{
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 60px;
+}
+section{
+    padding: 120px 0; /*espacio entre seciones*/
+}
+p{
+    font-size: 18px;
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+a:hover{
+    text-decoration: none;
+}
+.topmargin-xs{
+    margin-top: 15px;
+}
+.topmargin-sn{
+    margin-top: 30px;
+}
+.topmargin-lg{
+    margin-top: 60px;
+}
+.btn{
+    font-size: 14px;
+    padding: 15px 26px;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+.btn-light{
+    background-color: #ffffff;
+    color: #lalala;
+    border: 2px solid #ffffff;
+}
+.btn i{
+    font-size: 14px;
+    margin-left: 5px;
+}
+.text-dark{
+    color:black;
+}
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05); /* sombra */
+    min-height:  100px;
+}
+.nav-link{
+    color : #1a1a1a;
+}
+.nav-link:hover{ /* cursor sobre los links*/
+    color : #1a1a1a;
+}
+.logo-brand{
+    min-width: 130px;
+    max-width: 160px;
+}
+.navbar-toggler{
+    font-size: 40px;
+}
+.navbar-toggler:focus{ /* para que se deje de ver el cuadro naraja cuando le damos click*/
+    outline: none;
+}
+
+
+/* SEGUNDA PARTE DE LA PAGINA*/
+
+/*PORTADA*/
+
+.container-portada{
+    width: 100%;
+    height: 600px;
+    background-image: url('portadaNosotros.jpg');
+    background-size: 100%;
+    position: relative;
+}
+.capa-degra{
+    width: 100%;
+    height: 100%;
+    position: absolute;    
+}
+.container-details{
+    width: 100%;
+    max-width: 2000px;
+    position: relative;
+    margin: auto;   
+}
+.details{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top:200px;
+    left: 10px;
+    color:white;
+}
+.details h1{
+    font-size: 40px;
+    font-weight: 100;
+}
+.details p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+
+/* PARTE DE MISION VISION Y OBJETIVOS */
+.content-center{
+    color: black;
+    max-width:  800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+
+}
+.carousel {
+    min-height: 240px;
+    padding: 40px;
+    border-radius: 2px;
+    text-align: center;
+}
+.carousel-item h2 {
+    color: #1F618D;
+}
+.carousel-item p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #1F618D;
+}
+
+.carousel-indicators li {
+    background-color: #1a1a1a;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    margin: 0 8px;
+}
+
+.carousel-control-next, .carousel-control-prev { 
+    color: #ffffff;
+    opacity: 1;
+    width: 5%;
+}
+
+.control-button {
+    background-color: #1a1a1a;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #1a1a1a;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-user {
+    max-width: 240px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.testimonial-user h6 {
+    margin-bottom: 0px;
+}
+
+.testimonial-user span {
+    font-size: 12px;
+}
+
+.testimonial-user img {
+    border-radius: 50%;
+    max-width: 50px;
+    text-align: center;
+}
+
+.rating i {
+    color: #ffb944;
+    font-size: 26px;
+}
