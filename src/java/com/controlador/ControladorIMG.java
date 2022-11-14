@@ -54,6 +54,9 @@ public class ControladorIMG extends HttpServlet {
                     }
                     p.setNombre(lista.get(0));
                     p.setRaza(lista.get(1));
+                    p.setNacimiento(lista.get(2));
+                    p.setEsteril(lista.get(3));
+                    p.setEspecie(lista.get(4));
                     pdao.agregar(p);
                     
                 } catch (Exception e) {

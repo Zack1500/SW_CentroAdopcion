@@ -21,13 +21,16 @@ public class AnimalesDAO {
 
     public int agregar(Animales a) {
         Conexion cn = new Conexion();
-        String sql = "insert into animales(Nombre, Foto, Raza)values(?,?,?)";
+        String sql = "insert into animales(Nombre, Foto, Raza, Nacimiento, Esteril, Especie) values(?,?,?,?,?,?)";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
             ps.setString(1, a.getNombre());
             ps.setString(2, a.getFoto());
             ps.setString(3, a.getRaza());
+            ps.setString(4, a.getNacimiento());
+            ps.setString(5, a.getEsteril());
+            ps.setString(6, a.getEspecie());
             ps.executeUpdate();
         } catch (Exception e) {
         }
@@ -49,6 +52,9 @@ public class AnimalesDAO {
                 a.setNombre(rs.getString(2));
                 a.setFoto(rs.getString(3));
                 a.setRaza(rs.getString(4));
+                a.setNacimiento(rs.getString(5));
+                a.setEsteril(rs.getString(6));
+                a.setEspecie(rs.getString(7));
                 lista.add(a);
             }
         } catch (Exception e) {

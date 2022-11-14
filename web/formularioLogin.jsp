@@ -43,7 +43,7 @@
                             <a class="nav-link" href="adopta.jsp" id="adopta">Adopta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="unete">Únete</a>
+                            <a class="nav-link" href="unete.jsp" id="unete">Únete</a>
                         <li class="nav-item">
                             <a class="nav-link" href="nosotros.jsp" id="nosotros">Nosotros</a>
                         </li>

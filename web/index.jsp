@@ -28,7 +28,7 @@
                         <a class="nav-link" href="index.jsp" id="inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nosotros.jsp" id="adopta">Nosotros</a>
+                        <a class="nav-link" href="#" id="adopta">Adopta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="unete.jsp" id="unete">Únete</a>
@@ -162,8 +162,6 @@
                         <img src="img/foto3.jpg" class="img-fluid" alt="portfolio 4">
                     </div>
                 </div>
-
-
             </div>
 
             <div class="text-center topmargin-sn">

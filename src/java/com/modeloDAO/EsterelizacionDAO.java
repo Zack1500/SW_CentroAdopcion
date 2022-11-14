@@ -19,8 +19,16 @@ public class EsterelizacionDAO {
     
      public List<Esterelizacion> listaresterelizacion() {
         Conexion cn = new Conexion();
-        
-        String sql = "select id_esteril,fecha,nomvet,info * from esteril";
+        /*
+        SELECT esteril.id_esteril, animales.Nombre,esteril.fecha_es,voluntarios.NombreV,esteril.info_es 
+        FROM esteril 
+        INNER JOIN voluntarios ON esteril.id_voluntario=voluntarios.id_voluntario
+        INNER JOIN animales ON esteril.idAnimal=animales.idAnimal;
+        SELECT esteril.id_esteril, animales.Nombre,esteril.fecha_es,voluntarios.NombreV,
+        esteril.nombre_vet,esteril.info_es FROM esteril, voluntarios, 
+        animales WHERE esteril.id_voluntario=voluntarios.id_voluntario AND esteril.idAnimal=animales.idAnimal
+        */
+        String sql = "SELECT * FROM esteril1";
         List<Esterelizacion>listaesteril=new ArrayList<>();
         try {
             con = cn.getConnection();
@@ -28,24 +36,14 @@ public class EsterelizacionDAO {
             rs=ps.executeQuery();
             while (rs.next()) {
                 Esterelizacion en=new Esterelizacion();
-                Animales an= new Animales();
-                Voluntarios vl=new Voluntarios();
-                /*
+                                         
                 en.setId_est(rs.getInt(1));
-                an.setNombre(rs.getString(2));
+                en.setId_animal(rs.getString(2));
                 en.setFecha_est(rs.getString(3));
-                vl.setNombre_v(rs.getString(4));
+                en.setId_voluntario(rs.getString(4));
                 en.setNom_vet(rs.getString(5));
                 en.setInfo(rs.getString(6));
-                */
-                
-                en.setId_est(rs.getInt("id_esteril"));
-                an.setNombre(rs.getString("Nombre"));
-                en.setFecha_est(rs.getString("fecha"));
-                vl.setNombre_v(rs.getString("NombreV"));
-                en.setNom_vet(rs.getString("nomvet"));
-                en.setNom_vet(rs.getString("info"));
-
+                listaesteril.add(en);
             }
         } catch (Exception e) {
         }

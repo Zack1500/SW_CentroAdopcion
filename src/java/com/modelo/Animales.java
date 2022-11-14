@@ -7,6 +7,11 @@ public class Animales {
     private String Nombre;
     private String Foto;
     private String Raza;
+    private String Nacimiento;
+    private String Sexo;
+    private String Esteril;
+    private String Estado;
+    private String Especie;
 
     public Animales() {
     }
@@ -42,6 +47,46 @@ public class Animales {
 
     public void setRaza(String Raza) {
         this.Raza = Raza;
+    }
+
+    public String getNacimiento() {
+        return Nacimiento;
+    }
+
+    public void setNacimiento(String Nacimiento) {
+        this.Nacimiento = Nacimiento;
+    }
+
+    public String getSexo() {
+        return Sexo;
+    }
+
+    public void setSexo(String Sexo) {
+        this.Sexo = Sexo;
+    }
+
+    public String getEsteril() {
+        return Esteril;
+    }
+
+    public void setEsteril(String Esteril) {
+        this.Esteril = Esteril;
+    }
+
+    public String getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(String Estado) {
+        this.Estado = Estado;
+    }
+
+    public String getEspecie() {
+        return Especie;
+    }
+
+    public void setEspecie(String Especie) {
+        this.Especie = Especie;
     }
 
 }

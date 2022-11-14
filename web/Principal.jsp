@@ -1,63 +1,146 @@
-
+<!doctype html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>JSP Page</title>
-    </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<html class="no-js" lang="en">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-          <a class="btn btn-outline-light" href="Controlador?menu=Adopcion" target="myFrame">Animales</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Solicitudes
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="Controlador?menu=ListarVoluntarios&accion=Listar" target="myFrame">Voluntarios</a>
-          <a class="dropdown-item" href="Controlador?menu=ListarDonaciones&accion=Listar" target="myFrame">Donadores</a>
-          <a class="dropdown-item" href="Controlador?menu=ListarSEsteril&accion=Listar">Esterelizaciones</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Buscar</a>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Administracion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="Principal.jsp"><img src="assets/images/icon/logo1.png" alt="logo"></a>
+                </div>
+                <br>
+                <h6 class="text-center" style="color: aliceblue"><i class="fa fa-user"></i> <strong>Jean Paul</strong></h6>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)"><i class="fa fa-tag"></i><span>Solicitudes</span></a>
+                                <ul class="collapse">
+                                    <li><a href="Controlador?menu=ListarVoluntarios&accion=Listar"><i class="fa fa-cubes"></i> Voluntarios</a></li>
+                                    <li><a href="Controlador?menu=ListarDonaciones&accion=Listar"><i class="fa fa-archive"></i> Donadores</a></li>
+                                    <li><a href="Controlador?menu=ListarSEsteril&accion=Listar"><i class="fa fa-archive"></i> Esterelizaciones</a></li>
+                                    <li><a href="Controlador?menu=ListarAdoptante&accion=Listar"><i class="fa fa-archive"></i> Adoptantes</a></li>
+                                </ul>
+                            </li>
+                     
+                            <li><a href="Controlador?menu=Adopcion" ><i class="ti-map-alt"></i> <span>Animales</span></a></li>
+                             <li><a href="Controlador?menu=listarA&accion=Listar"><i class="ti-map-alt"></i> <span>Albergues</span></a></li>
+                             <li><a href="Controlador?menu=ListarExpediente&accion=Listar"><i class="ti-map-alt"></i> <span>Expediente</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-outline-light" href="Controlador?menu=listarA&accion=Listar" target="myFrame">Albergues</a>
-      </li>
-    </ul>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-4 clearfix">
+                        <div class="nav-btn pull-left" style="margin-top: 0px">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-8 clearfix">
+                        <ul class="notification-area pull-right">
+                            <li>
+                                <a href="index.jsp">
+                                    Cerrar Sessión
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <div class="main-content-inner">
 
-      
-      <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Administrador
-  </button>
-  <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Perfil</a>
-    <a class="dropdown-item" href="#">${usuario.getUser_admin()}</a>
-    <form action="Validar" method="POST">
-    <button name="accion" value="Salir" class="dropdown-item" href="#">Salir</button>
-    </form>
-  </div>
-</div>
-  </div>
-</nav>
-    <div class="m-4" style="height: 650px">
-    <iframe name="myFrame" style="height: 100%; width:100%; border: none"></iframe>
-  </div>  
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2022 <a href="https://colorlib.com/wp/">Pethouse</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="m-4" style="height: 650px">
+    <iframe name="myFrame" style="height: 100%; width:100%; border: none"></iframe>
+  </div> 
+    <!-- page container area end -->
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
 </html>

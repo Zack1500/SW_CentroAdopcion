@@ -1,7 +1,6 @@
 
 package com.modelo;
 
-
 public class Administrador {
     private int id_ad;
     private String user_admin;

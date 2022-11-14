@@ -8,9 +8,11 @@ package com.controlador;
 import com.modelo.Albergues;
 import com.modelo.Donacion;
 import com.modelo.Voluntarios;
+import com.modeloDAO.AdoptantesDAO;
 import com.modeloDAO.AlberguesDAO;
 import com.modeloDAO.DonacionDAO;
 import com.modeloDAO.EsterelizacionDAO;
+import com.modeloDAO.ExpedienteDAO;
 import com.modeloDAO.VoluntariosDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,6 +41,10 @@ public class Controlador extends HttpServlet {
     VoluntariosDAO vldao= new VoluntariosDAO();
     
     EsterelizacionDAO etdao= new EsterelizacionDAO();
+    
+    ExpedienteDAO exdao= new ExpedienteDAO();
+    
+    AdoptantesDAO adpdao= new AdoptantesDAO();
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -100,6 +106,30 @@ public class Controlador extends HttpServlet {
                         throw new AssertionError();
                }
                  request.getRequestDispatcher("vistas/ListarVoluntarios.jsp").forward(request, response);
+        }
+           
+                   if (menu.equals("ListarExpediente")) {
+                   switch (accion){
+                   case "Listar":
+                       List listaexpediente=exdao.listarexpediente();
+                       request.setAttribute("expediente", listaexpediente);
+                       break;
+                    default:
+                        throw new AssertionError();
+               }
+                 request.getRequestDispatcher("vistas/Expediente.jsp").forward(request, response);
+        }
+                   
+                if (menu.equals("ListarAdoptante")) {
+                   switch (accion){
+                   case "Listar":
+                       List listaadoptante=adpdao.listar();
+                       request.setAttribute("adoptante", listaadoptante);
+                       break;
+                    default:
+                        throw new AssertionError();
+               }
+                 request.getRequestDispatcher("vistas/ListaAdoptante.jsp").forward(request, response);
         }
 
     }
