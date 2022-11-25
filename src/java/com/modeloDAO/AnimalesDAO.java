@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalesDAO {
+public class AnimalesDAO extends Animales {
 
     Connection con;
     PreparedStatement ps;
@@ -61,4 +61,34 @@ public class AnimalesDAO {
         }
         return lista;
     }
+    
+        public int actualizar(Animales an) {
+        Conexion cn = new Conexion();
+        String sql = "update animales set Nombre=?, Foto=?, Raza=?, Nacimiento=?, Esteril=?, Especie=? where idAnimal=?  ";
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setString(1, an.getNombre());
+            ps.setString(2, an.getFoto());
+            ps.setString(3, an.getRaza());
+            ps.setString(4, an.getNacimiento());
+            ps.setString(5, an.getEsteril());
+            ps.setString(6, an.getEspecie());
+            ps.setInt(7 , an.getId());
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
+    }
+        
+        public void delete(int id){
+            Conexion cn = new Conexion();
+            String sql="delete from animales where idAnimal="+id;
+            try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+            } catch (Exception e) {
+            }
+        }
 }
