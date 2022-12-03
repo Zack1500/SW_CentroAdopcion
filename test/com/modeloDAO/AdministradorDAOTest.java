@@ -6,6 +6,10 @@
 package com.modeloDAO;
 
 import com.modelo.Administrador;
+import com.modelo.Animales;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -22,38 +26,30 @@ public class AdministradorDAOTest {
     public AdministradorDAOTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
+ 
+    private Administrador ad;
+ 
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of validar method, of class AdministradorDAO.
-     */
     @Test
     public void testValidar() {
         System.out.println("validar autenticacion");
+        AdministradorDAO instance = new AdministradorDAO();
+        
+        try {
+     
         String email = "Jean Paul";
         String clave = "12345";
         
-        AdministradorDAO instance = new AdministradorDAO();
-        // Administrador expResult = null;
-        Administrador result = instance.validar(email, clave);
-        assertEquals(result,true);
-        //assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        //Administrador result = instance.validar(email, clave);
+        assertEquals("Jean Paul","12345", instance.validar(email, clave));
+        
+        
+        } catch (Exception e) {
+           
+        }
+        
+      
+       
     }
     
 }

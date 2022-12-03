@@ -9,6 +9,13 @@ public class Administrador {
     public Administrador() {
     }
 
+    public Administrador(String user_admin, String pass_admin) {
+        this.user_admin = user_admin;
+        this.pass_admin = pass_admin;
+    }
+
+ 
+    
     public int getId_ad() {
         return id_ad;
     }

@@ -16,6 +16,18 @@ public class Animales {
     public Animales() {
     }
 
+    public Animales(String Nombre, String Foto, String Raza, String Nacimiento, String Esteril, String Especie) {
+        this.Nombre = Nombre;
+        this.Foto = Foto;
+        this.Raza = Raza;
+        this.Nacimiento = Nacimiento;
+        this.Esteril = Esteril;
+        this.Especie = Especie;
+    }
+
+    
+    
+    
     public int getId() {
         return id;
     }

@@ -38,4 +38,26 @@ public class AlberguesDAO {
         return lista;
     }
 
+     
+       public List buscar(int id) {
+        Conexion cn = new Conexion();
+        String sql = "select * from albergues where Id_albergues="+id;
+        Albergues alb=new Albergues();
+         List<Albergues>busqueda=new ArrayList<>();
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs=ps.executeQuery();
+            while (rs.next()) {
+                alb.setId_albergue(rs.getInt(1));
+                alb.setNombre_a(rs.getString(2));
+                alb.setDireccion_a(rs.getString(3));
+                alb.setTelefono_a(rs.getInt(4));
+                alb.setMunicipio(rs.getString(5));
+                busqueda.add(alb);
+            }
+        } catch (Exception e) {
+        }
+        return busqueda;
+    }
 }

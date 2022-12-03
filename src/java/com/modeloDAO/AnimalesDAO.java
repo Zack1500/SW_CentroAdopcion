@@ -64,7 +64,7 @@ public class AnimalesDAO extends Animales {
     
         public int actualizar(Animales an) {
         Conexion cn = new Conexion();
-        String sql = "update animales set Nombre=?, Foto=?, Raza=?, Nacimiento=?, Esteril=?, Especie=? where idAnimal=?  ";
+        String sql = "update animales set Nombre=?, Foto=?, Raza=?, Nacimiento=?, Esteril=?, Especie=? where idAnimal=? ";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
